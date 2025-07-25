@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Temperature Converter</title>
+  <link rel="stylesheet" href="task-3.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🌡️ Temperature Converter</h1>
+
+    <input type="number" id="tempInput" placeholder="Enter temperature" />
+
+    <div class="radio-group">
+      <label><input type="radio" name="unit" value="celsius" checked> Celsius (°C)</label>
+      <label><input type="radio" name="unit" value="fahrenheit"> Fahrenheit (°F)</label>
+      <label><input type="radio" name="unit" value="kelvin"> Kelvin (K)</label>
+    </div>
+
+    <button onclick="convertTemp()">Convert</button>
+
+    <div id="result"></div>
+  </div>
+
+  <script>
+    function convertTemp() {
+      const input = document.getElementById("tempInput").value;
+      const unit = document.querySelector('input[name="unit"]:checked').value;
+      const result = document.getElementById("result");
+
+      if (input === "" || isNaN(input)) {
+        result.textContent = "❌ Please enter a valid number.";
+        return;
+      }
+
+      const temp = parseFloat(input);
+      let output = "";
+
+      if (unit === "celsius") {
+        const f = (temp * 9/5) + 32;
+        const k = temp + 273.15;
+        output = `${temp}°C = ${f.toFixed(2)}°F = ${k.toFixed(2)}K`;
+      } else if (unit === "fahrenheit") {
+        const c = (temp - 32) * 5/9;
+        const k = c + 273.15;
+        output = `${temp}°F = ${c.toFixed(2)}°C = ${k.toFixed(2)}K`;
+      } else if (unit === "kelvin") {
+        const c = temp - 273.15;
+        const f = (c * 9/5) + 32;
+        output = `${temp}K = ${c.toFixed(2)}°C = ${f.toFixed(2)}°F`;
+      }
+
+      result.textContent = output;
+    }
+  </script>
+</body>
+</html>
