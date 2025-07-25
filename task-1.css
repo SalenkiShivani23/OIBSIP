@@ -1,0 +1,174 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background-color: #f4f9f9;
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+  background: #fff;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+.brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #009688;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+.nav-links a:hover {
+  color: #009688;
+}
+
+/* Hero Section */
+.hero {
+  height: 80vh;
+  background-color: #e0f7fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+.hero-text {
+  max-width: 700px;
+}
+.hero h1 {
+  font-size: 3rem;
+  font-family: 'Playfair Display', serif;
+  color: #00796b;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-top: 15px;
+}
+.btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 25px;
+  background: #ffeb3b;
+  color: #222;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+.btn:hover {
+  background: #fdd835;
+}
+
+/* Destinations */
+.destinations {
+  padding: 80px 20px;
+  text-align: center;
+  background: #ffffff;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+.card {
+  background: white;
+  padding: 25px;
+  width: 260px;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+}
+.card h3 {
+  color: #00796b;
+  margin-bottom: 10px;
+}
+
+/* Register */
+.register {
+  background: #e0f2f1;
+  padding: 80px 20px;
+  text-align: center;
+}
+.register form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: auto;
+}
+.register input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+.register button {
+  padding: 12px;
+  background: #009688;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.register button:hover {
+  background: #00796b;
+}
+
+/* Contact */
+.contact {
+  padding: 60px 20px;
+  text-align: center;
+}
+.contact h2 {
+  color: #009688;
+  margin-bottom: 20px;
+}
+.contact p {
+  margin: 6px 0;
+}
+
+/* Footer */
+footer {
+  background: #263238;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
